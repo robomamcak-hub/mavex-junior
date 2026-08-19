@@ -6,30 +6,43 @@
 <meta name="theme-color" content="#214f7d">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="MAVEX JUNIOR">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-192.png" type="image/png">
 <title>MAVEX – JUNIOR</title>
 <style>
-html,body{margin:0;width:100%;height:100%;font-family:Arial,sans-serif;background:#f5f7fa}
-main{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
-.card{width:min(460px,100%);background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 30px rgba(0,0,0,.12);text-align:center}
-.logo{width:220px;max-width:80%;margin:auto;display:block}
-h1{color:#214f7d;font-size:24px} p{color:#555;line-height:1.5}
-.btn{display:inline-block;margin-top:14px;padding:14px 22px;border-radius:12px;background:#214f7d;color:#fff;text-decoration:none;font-weight:700}
-.small{font-size:13px;color:#777;margin-top:18px}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,sans-serif;background:#f5f7fa;color:#111}
+main{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{width:min(760px,100%);background:#fff;border-radius:24px;padding:42px 38px 34px;box-shadow:0 8px 30px rgba(0,0,0,.12);text-align:center}
+.logo{width:min(620px,92%);height:auto;display:block;margin:0 auto 38px}
+h1{margin:0 0 12px;color:#214f7d;font-size:clamp(25px,5vw,40px);font-weight:800}
+p{margin:0;color:#222;font-size:clamp(16px,3vw,22px);line-height:1.45}
+.btn{display:flex;align-items:center;justify-content:center;gap:14px;width:min(430px,100%);margin:30px auto 0;padding:18px 24px;border-radius:15px;background:#103b78;color:#fff;text-decoration:none;font-size:clamp(18px,3vw,24px);font-weight:800;box-shadow:0 5px 14px rgba(16,59,120,.22)}
+.cal{font-size:1.25em;line-height:1}
+.small{margin-top:24px;color:#666;font-size:14px}
+@media(max-width:500px){
+main{padding:12px}
+.card{padding:28px 18px 24px;border-radius:18px}
+.logo{margin-bottom:28px}
+.btn{padding:16px 18px}
+}
 </style>
 </head>
 <body>
-<main><section class="card">
-<img class="logo" src="icon.svg" alt="MAVEX JUNIOR">
+<main>
+<section class="card">
+<img class="logo" src="logo.png" alt="AUTOŠKOLA mavex-junior">
 <h1>MAVEX – JUNIOR</h1>
 <p>Rezervačný kalendár autoškoly MAVEX – JUNIOR.</p>
-<a class="btn" href="https://script.google.com/macros/s/AKfycbzIWitrwJs8-ygDerMXPEgmlDk0k4OuRjoG1-pKcpIEB9ou5_uueng8KRyunKplJfBvMA/exec">OTVORIŤ MAVEX</a>
+<a class="btn" href="https://script.google.com/macros/s/AKfycbzIWitrwJs8-ygDerMXPEgmlDk0k4OuRjoG1-pKcpIEB9ou5_uueng8KRyunKplJfBvMA/exec"><span class="cal">▣</span><span>OTVORIŤ MAVEX</span></a>
 <div class="small">MAVEX JUNIOR – vstup do rezervačného kalendára.</div>
-</section></main>
+</section>
+</main>
 <script>
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").catch(console.error);
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js").catch(console.error);
+}
 </script>
-</body></html>
+</body>
+</html>
