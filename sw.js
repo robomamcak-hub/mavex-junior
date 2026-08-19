@@ -1,13 +1,5 @@
-const CACHE="mavex-junior-v3";
+const CACHE="mavex-junior-3d-v2";
 const ASSETS=["./","./index.html","./manifest.json","./logo.png","./icon-192.png","./icon-512.png"];
-self.addEventListener("install",event=>{
-  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)));
-  self.skipWaiting();
-});
-self.addEventListener("activate",event=>event.waitUntil(self.clients.claim()));
-self.addEventListener("fetch",event=>{
-  const url=new URL(event.request.url);
-  if(url.origin===location.origin){
-    event.respondWith(caches.match(event.request).then(cached=>cached||fetch(event.request)));
-  }
-});
+self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting()});
+self.addEventListener("activate",e=>e.waitUntil(self.clients.claim()));
+self.addEventListener("fetch",e=>{if(new URL(e.request.url).origin===location.origin)e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))});
