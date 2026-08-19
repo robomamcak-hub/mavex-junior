@@ -1,0 +1,19 @@
+{
+  "name": "MAVEX – JUNIOR",
+  "short_name": "MAVEX JUNIOR",
+  "description": "Rezervačný kalendár autoškoly MAVEX – JUNIOR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#214f7d",
+  "background_color": "#f5f7fa",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
