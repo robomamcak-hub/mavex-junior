@@ -37,7 +37,8 @@ body{display:flex;justify-content:center;align-items:center;padding:18px}
   border-radius:18px;
   background:linear-gradient(#ff3b3f,#e60008);
   color:#fff;
-  font-size:clamp(14px,2.2vw,30px);
+  font-size:clamp(12px,1.75vw,24px);
+  white-space:nowrap;
   font-weight:900;
   letter-spacing:.2px;
   box-shadow:0 8px 0 #970008,0 14px 28px rgba(210,0,10,.30);
@@ -49,11 +50,6 @@ body{display:flex;justify-content:center;align-items:center;padding:18px}
 .real-button:active{transform:translateY(4px);box-shadow:0 4px 0 #970008,0 8px 18px rgba(210,0,10,.25)}
 .real-button span{display:inline-flex;align-items:center;justify-content:center;gap:.45em}
 .cal{font-size:1.05em}
-.corner-mask-left,.corner-mask-right{
-  position:absolute;z-index:4;background:rgba(255,255,255,.96);pointer-events:none;
-}
-.corner-mask-left{left:0;bottom:0;width:17%;height:9%}
-.corner-mask-right{right:0;bottom:0;width:10%;height:8%}
 @media(max-width:700px){
   body{padding:6px}
   .app{border-radius:18px}
@@ -72,8 +68,6 @@ body{display:flex;justify-content:center;align-items:center;padding:18px}
 <body>
 <main class="app" aria-label="MAVEX – JUNIOR">
   <img class="design" src="wau-design.png" alt="MAVEX – JUNIOR – rezervačný kalendár autoškoly">
-  <div class="corner-mask-left"></div>
-  <div class="corner-mask-right"></div>
   <a class="real-button" href="https://script.google.com/macros/s/AKfycbzIWitrwJs8-ygDerMXPEgmlDk0k4OuRjoG1-pKcpIEB9ou5_uueng8KRyunKplJfBvMA/exec" aria-label="Otvoriť MAVEX – JUNIOR">
     <span><b class="cal">▣</b> OTVORIŤ MAVEX – JUNIOR</span>
   </a>
