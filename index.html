@@ -31,25 +31,26 @@ body{display:flex;justify-content:center;align-items:center;padding:18px}
 }
 .real-button{
   position:absolute;
-  left:26%; top:59.2%;
-  width:48%; height:12.2%;
+  left:29.5%; top:59.2%;
+  width:40.5%; height:12.2%;
   border:0;
   border-radius:18px;
-  background:linear-gradient(#ff3b3f,#e60008);
-  color:#fff;
-  font-size:clamp(11px,1.45vw,20px);
+  background:transparent;
+  color:transparent;
+  font-size:1px;
   white-space:nowrap;
   font-weight:900;
-  letter-spacing:.2px;
-  box-shadow:0 8px 0 #970008,0 14px 28px rgba(210,0,10,.30);
+  letter-spacing:0;
+  box-shadow:none;
+  padding:0;
   cursor:pointer;
   transition:transform .12s ease,filter .12s ease;
   z-index:5;
 }
-.real-button:hover{filter:brightness(1.05);transform:translateY(-2px)}
-.real-button:active{transform:translateY(4px);box-shadow:0 4px 0 #970008,0 8px 18px rgba(210,0,10,.25)}
-.real-button span{display:inline-flex;align-items:center;justify-content:center;gap:.45em}
-.cal{font-size:1.05em}
+.real-button:hover{filter:none;transform:none}
+.real-button:active{transform:none;box-shadow:none}
+.real-button span{display:none}
+.cal{display:none}
 @media(max-width:700px){
   body{padding:6px}
   .app{border-radius:18px}
