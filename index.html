@@ -44,11 +44,40 @@ body{display:flex;justify-content:center;align-items:center;padding:18px}
   box-shadow:none;
   padding:0;
   cursor:pointer;
-  transition:transform .12s ease,filter .12s ease;
+  transition:transform .12s ease;
   z-index:5;
+  overflow:hidden;
 }
-.real-button:hover{filter:none;transform:none}
-.real-button:active{transform:none;box-shadow:none}
+/* Zakryje pôvodný text vložený v obrázku a nahradí ho správnym názvom. */
+.real-button::before{
+  content:"";
+  position:absolute;
+  left:5.5%; right:5.5%;
+  top:16%; height:68%;
+  border-radius:8px;
+  background:linear-gradient(180deg,#ff3434 0%,#fb1f27 45%,#e60008 100%);
+  z-index:1;
+}
+.real-button::after{
+  content:"OTVORIŤ MAVEX – JUNIOR";
+  position:absolute;
+  left:6%; right:6%;
+  top:17%; height:66%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  white-space:nowrap;
+  color:#fff;
+  font-size:clamp(9px,2.0vw,20px);
+  line-height:1;
+  font-weight:900;
+  letter-spacing:.2px;
+  text-shadow:0 2px 3px rgba(0,0,0,.35);
+  z-index:2;
+}
+.real-button:hover{transform:none}
+.real-button:active{transform:translateY(1px)}
 .real-button span{display:none}
 .cal{display:none}
 @media(max-width:700px){
